@@ -1,0 +1,72 @@
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.slick-cell.active input.editor-text {
+  border: initial;
+  background: #ffffff;
+  padding-bottom: 0;
+  padding-left: 2px;
+  padding-right: 0;
+  padding-top: 0;
+  margin-left: -2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  margin-top: 2px; }
+
+/* Long Text Editor */
+.slick-large-editor-text {
+  z-index: 10000;
+  position: absolute;
+  background: #ffffff;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 8px; }
+
+.slick-large-editor-text textarea {
+  background: #ffffff;
+  height: 80px;
+  width: 250px;
+  border: 0;
+  outline: 0; }
+
+.slick-large-editor-text .editor-footer {
+  text-align: right; }
+
+.slick-large-editor-text .editor-footer > button {
+  margin-left: 2px; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvX3ZhcmlhYmxlcy5zY3NzIiwic2xpY2stZWRpdG9ycy5jc3MiLCIuLi8uLi8uLi9zcmMvYXBwL21vZHVsZXMvYW5ndWxhci1zbGlja2dyaWQvc3R5bGVzL3NsaWNrLWVkaXRvcnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztFQ0lFO0FEQUM7O2tDQ0crQjtBREFsQyxpQ0FBQTtBQVVBLG9FQUFBO0FBTUEsU0FBQTtBQU1BLFNBQUE7QUFXQSxRQUFBO0FBUUEseUNBQUE7QUFPQSxXQUFBO0FBeUJBLCtCQUFBO0FBS0EsbUhBQUE7QUFtQkEsaUJBQUE7QUFjQSxZQUFBO0FBWUEsOEJBQUE7QUFLQSxrQkFBQTtBQVlBLHdCQUFBO0FBV0Esc0JBQUE7QUFJQSwrQkFBQTtBQWFBLHVCQUFBO0FBa0JBLHNDQUFBO0FBT0EsWUFBQTtBQVl5RCw2Q0FBQTtBQVd6RCxxQkFBQTtBQVNBLDhCQUFBO0FBNEJBLHVCQUFBO0FBTXlELFlBQUE7QUFDQSxZQUFBO0FBUXpELDJCQUFBO0FBOEJBLHlCQUFBO0FBMEJBLDRCQUFBO0FBS0Esb0JBQUE7QUFHQSxhQUFBO0FFalZBO0VBRUksZUY2TTZDO0VFNU03QyxtQkY2TTZDO0VFNU03QyxpQkZpTnVDO0VFaE52QyxpQkZpTnlDO0VFaE56QyxnQkZpTnVDO0VFaE52QyxjRmlOdUM7RUVoTnZDLGlCRjBNMEM7RUV6TTFDLGtCRndNeUM7RUV2TXpDLGlCRnlNeUM7RUV4TXpDLGVGeU15QyxFQUFBOztBRXJNN0MscUJBQUE7QUFDQTtFQUNFLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsbUJGb0wrQztFRW5ML0MsWUZxTDJDO0VFcEwzQyxzQkZtTHNEO0VFbEx0RCxrQkZvTDJDLEVBQUE7O0FFbEw3QztFQUNFLG1CRjhLK0M7RUU3Sy9DLFlGaUw0QztFRWhMNUMsWUZpTDZDO0VFaEw3QyxTQUFTO0VBQ1QsVUFBVSxFQUFBOztBQUVaO0VBQ0UsaUJGNks2QyxFQUFBOztBRTNLL0M7RUFDRSxnQkYySzJDLEVBQUEiLCJmaWxlIjoic2xpY2stZWRpdG9ycy5jc3MifQ== */

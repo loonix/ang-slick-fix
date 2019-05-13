@@ -1,0 +1,179 @@
+/*
+ * IMPORTANT:
+ * In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+ * No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+ * classes should alter those!
+ */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.pointer {
+  cursor: pointer; }
+
+.slickgrid-container .slick-header-columns,
+.slickgrid-container .slick-header-column {
+  background: rgba(255, 255, 255, 0.6); }
+
+.slickgrid-container .slick-header-columns {
+  /*border-bottom: 1px solid $grid-border-color;*/
+  background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1)); }
+
+.slickgrid-container .slick-header-column {
+  border-right: 1px solid fade(black, 3%);
+  border-bottom: 1px solid fade(black, 3%); }
+
+.slickgrid-container .slick-header-column:hover {
+  background: rgba(250, 250, 250, 0.6); }
+
+.slickgrid-container .slick-header-column-active {
+  background: rgba(242, 242, 242, 0.6) !important; }
+
+.slickgrid-container .slick-headerrow {
+  background: rgba(255, 255, 255, 0.6); }
+
+.slickgrid-container .slick-headerrow-column {
+  background: #fafafa;
+  border-bottom: 0; }
+
+.slickgrid-container .grid-canvas {
+  background: white; }
+
+.slickgrid-container .slick-row {
+  background: inherit;
+  border: 0;
+  line-height: 20px; }
+  .slickgrid-container .slick-row .slick-cell {
+    background: inherit;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box; }
+    .slickgrid-container .slick-row .slick-cell.invalid {
+      border-color: red;
+      -moz-animation-duration: 0.2s;
+      -webkit-animation-duration: 0.2s;
+      -moz-animation-name: slickgrid-invalid-hilite;
+      -webkit-animation-name: slickgrid-invalid-hilite;
+      animation-duration: 0.2s;
+      animation-name: slickgrid-invalid-hilite; }
+    .slickgrid-container .slick-row .slick-cell.selected {
+      background-color: #e7e7c3; }
+    .slickgrid-container .slick-row .slick-cell.active {
+      border: 1px solid #aaaaaa;
+      padding-top: 5px;
+      padding-left: 7px; }
+      .slickgrid-container .slick-row .slick-cell.active input.editor-text {
+        width: 100%;
+        height: 100%;
+        outline: 0;
+        -webkit-transform: translate(0, -2px);
+                transform: translate(0, -2px); }
+  .slickgrid-container .slick-row.odd .slick-cell {
+    background: #f7f7f7; }
+    .slickgrid-container .slick-row.odd .slick-cell.selected {
+      background-color: #d6d6b2; }
+  .slickgrid-container .slick-row.active-row .slick-cell {
+    background-color: #e2fffd; }
+    .slickgrid-container .slick-row.active-row .slick-cell.selected {
+      background-color: red; }
+  .slickgrid-container .slick-row.active-row.odd .slick-cell {
+    background-color: #f2f2f2; }
+    .slickgrid-container .slick-row.active-row.odd .slick-cell.selected {
+      background-color: green; }
+  .slickgrid-container .slick-row.loading {
+    opacity: 0.5; }
+
+.slickgrid-container .slick-group {
+  border-bottom: 2px solid silver; }
+
+.slickgrid-container .slick-group-toggle {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px; }
+
+.slickgrid-container .slick-group-toggle.expanded {
+  background: none; }
+
+.slickgrid-container .slick-group-toggle.collapsed {
+  background: none; }
+
+.slickgrid-container .slick-group-totals {
+  color: gray;
+  background: white; }
+
+.slickgrid-container .slick-sortable-placeholder {
+  background: silver !important; }
+
+@-webkit-keyframes slickgrid-invalid-hilite {
+  from {
+    box-shadow: 0 0 6px red; }
+  to {
+    box-shadow: none; } }
+
+@keyframes slickgrid-invalid-hilite {
+  from {
+    box-shadow: 0 0 6px red; }
+  to {
+    box-shadow: none; } }
+
+.slickgrid-container .header-overlay,
+.slickgrid-container .cell-overlay,
+.slickgrid-container .selection-cell-overlay {
+  display: block;
+  position: absolute;
+  z-index: 999; }
+
+.slickgrid-container .slick-cell > .editor-select {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0; }
+
+.slickgrid-container .slick-range-decorator {
+  z-index: 100;
+  pointer-events: none;
+  background: transparent;
+  border: none;
+  outline: black; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvc2xpY2stZGVmYXVsdC10aGVtZS5zY3NzIiwic2xpY2stZGVmYXVsdC10aGVtZS5jc3MiLCIuLi8uLi8uLi9zcmMvYXBwL21vZHVsZXMvYW5ndWxhci1zbGlja2dyaWQvc3R5bGVzL192YXJpYWJsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7RUNLRTtBQ0xGOzs7O0VEVUU7QUNOQzs7a0NEUytCO0FDTmxDLGlDQUFBO0FBVUEsb0VBQUE7QUFNQSxTQUFBO0FBTUEsU0FBQTtBQVdBLFFBQUE7QUFRQSx5Q0FBQTtBQU9BLFdBQUE7QUF5QkEsK0JBQUE7QUFLQSxtSEFBQTtBQW1CQSxpQkFBQTtBQWNBLFlBQUE7QUFZQSw4QkFBQTtBQUtBLGtCQUFBO0FBWUEsd0JBQUE7QUFXQSxzQkFBQTtBQUlBLCtCQUFBO0FBYUEsdUJBQUE7QUFrQkEsc0NBQUE7QUFPQSxZQUFBO0FBWXlELDZDQUFBO0FBV3pELHFCQUFBO0FBU0EsOEJBQUE7QUE0QkEsdUJBQUE7QUFNeUQsWUFBQTtBQUNBLFlBQUE7QUFRekQsMkJBQUE7QUE4QkEseUJBQUE7QUEwQkEsNEJBQUE7QUFLQSxvQkFBQTtBQUdBLGFBQUE7QUYzVUM7RUFDRSxlQUFlLEVBQUE7O0FBRWpCOztFQUdJLG9DRVk0RCxFQUFBOztBRmZoRTtFQVFJLCtDQUFBO0VBQ0EscUVBQThELEVBQUE7O0FBVGxFO0VBYUksdUNFQW9EO0VGQ3BELHdDRURvRCxFQUFBOztBRmJ4RDtFQWtCSSxvQ0FBK0MsRUFBQTs7QUFsQm5EO0VBc0JJLCtDQUEwRCxFQUFBOztBQXRCOUQ7RUEwQkksb0NFWDRELEVBQUE7O0FGZmhFO0VBOEJJLG1CQUFtQjtFQUNuQixnQkFBZ0IsRUFBQTs7QUEvQnBCO0VBbUNJLGlCQUFpQixFQUFBOztBQW5DckI7RUF1Q0ksbUJBQW1CO0VBQ25CLFNBQVM7RUFDVCxpQkFBaUIsRUFBQTtFQXpDckI7SUE0Q00sbUJBQW1CO0lBRW5CLGdCQUFnQjtJQUNoQixtQkFBbUI7SUFDbkIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixzQkFBc0IsRUFBQTtJQWxENUI7TUFxRFEsaUJBQWlCO01BQ2pCLDZCQUE2QjtNQUM3QixnQ0FBZ0M7TUFDaEMsNkNBQTZDO01BQzdDLGdEQUFnRDtNQUNoRCx3QkFBd0I7TUFDeEIsd0NBQXdDLEVBQUE7SUEzRGhEO01BK0RRLHlCQUFvQyxFQUFBO0lBL0Q1QztNQW1FUSx5QkVoRDZEO01GbUQ3RCxnQkFBZ0I7TUFDaEIsaUJBQWlCLEVBQUE7TUF2RXpCO1FBMEVVLFdBQVc7UUFDWCxZQUFZO1FBQ1osVUFBVTtRQUNWLHFDQUE2QjtnQkFBN0IsNkJBQTZCLEVBQUE7RUE3RXZDO0lBbUZNLG1CRTFEK0QsRUFBQTtJRnpCckU7TUF1RlEseUJBQW9DLEVBQUE7RUF2RjVDO0lBNEZNLHlCQUFvQyxFQUFBO0lBNUYxQztNQWdHUSxxQkFBcUIsRUFBQTtFQWhHN0I7SUFxR00seUJFM0UrRCxFQUFBO0lGMUJyRTtNQXlHUSx1QkFBdUIsRUFBQTtFQXpHL0I7SUE4R00sWUFBWSxFQUFBOztBQTlHbEI7RUFtSEksK0JBQStCLEVBQUE7O0FBbkhuQztFQXVIRyxVQUFVO0VBQ1YsV0FBVztFQUNYLGlCQUFpQixFQUFBOztBQXpIcEI7RUE2SEcsZ0JBQWdCLEVBQUE7O0FBN0huQjtFQWlJRyxnQkFBZ0IsRUFBQTs7QUFqSW5CO0VBcUlJLFdBQVc7RUFDWCxpQkFBaUIsRUFBQTs7QUF0SXJCO0VBMElJLDZCQUE2QixFQUFBOztBQUcvQjtFQUNFO0lBQ0UsdUJBQXVCLEVBQUE7RUFFekI7SUFDRSxnQkFBZ0IsRUFBQSxFQUFBOztBQUxwQjtFQUNFO0lBQ0UsdUJBQXVCLEVBQUE7RUFFekI7SUFDRSxnQkFBZ0IsRUFBQSxFQUFBOztBQWxKdEI7OztFQWdLSSxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLFlBQVksRUFBQTs7QUFsS2hCO0VBc0tJLGtCQUFrQjtFQUNsQixPQUFPO0VBQ1AsUUFBUTtFQUNSLFdBQVc7RUFDWCxNQUFNO0VBQ04sU0FBUztFQUNULGVBQWU7RUFDZixZQUFZO0VBQ1osU0FBUyxFQUFBOztBQTlLYjtFQWtMSSxZQUFZO0VBQ1osb0JBQW9CO0VBQ3BCLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osY0FBYyxFQUFBIiwiZmlsZSI6InNsaWNrLWRlZmF1bHQtdGhlbWUuY3NzIn0= */

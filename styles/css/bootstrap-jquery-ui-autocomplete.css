@@ -1,0 +1,80 @@
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.ui-autocomplete {
+  position: absolute;
+  z-index: 1000;
+  padding: 0;
+  margin-top: 2px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  max-height: 25vh;
+  min-height: 75px;
+  min-width: 50px;
+  overflow-y: auto; }
+  .ui-autocomplete li div {
+    clear: both;
+    display: block;
+    color: #333333;
+    padding: 3px 15px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    white-space: nowrap; }
+
+.ui-state-hover,
+.ui-state-active,
+.ui-state-focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #262626;
+  background-color: #e2edfa; }
+
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  width: 1px; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvX3ZhcmlhYmxlcy5zY3NzIiwiYm9vdHN0cmFwLWpxdWVyeS11aS1hdXRvY29tcGxldGUuY3NzIiwiLi4vLi4vLi4vc3JjL2FwcC9tb2R1bGVzL2FuZ3VsYXItc2xpY2tncmlkL3N0eWxlcy9ib290c3RyYXAtanF1ZXJ5LXVpLWF1dG9jb21wbGV0ZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7O0VDSUU7QURBQzs7a0NDRytCO0FEQWxDLGlDQUFBO0FBVUEsb0VBQUE7QUFNQSxTQUFBO0FBTUEsU0FBQTtBQVdBLFFBQUE7QUFRQSx5Q0FBQTtBQU9BLFdBQUE7QUF5QkEsK0JBQUE7QUFLQSxtSEFBQTtBQW1CQSxpQkFBQTtBQWNBLFlBQUE7QUFZQSw4QkFBQTtBQUtBLGtCQUFBO0FBWUEsd0JBQUE7QUFXQSxzQkFBQTtBQUlBLCtCQUFBO0FBYUEsdUJBQUE7QUFrQkEsc0NBQUE7QUFPQSxZQUFBO0FBWXlELDZDQUFBO0FBV3pELHFCQUFBO0FBU0EsOEJBQUE7QUE0QkEsdUJBQUE7QUFNeUQsWUFBQTtBQUNBLFlBQUE7QUFRekQsMkJBQUE7QUE4QkEseUJBQUE7QUEwQkEsNEJBQUE7QUFLQSxvQkFBQTtBQUdBLGFBQUE7QUU3VUE7RUFDRSxrQkFBa0I7RUFDbEIsYUY0RzJDO0VFM0czQyxVQUFVO0VBQ1YsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQix5QkY2RitDO0VFNUYvQyxxQ0Y2RnFFO0VFNUZyRSxrQkY2RjBDO0VFNUYxQywyQ0Y2RnVFO0VFNUZ2RSw0QkFBNEI7RUFDNUIsZ0JGOEY0QztFRTdGNUMsZ0JGOEY0QztFRTdGNUMsZUY4RjJDO0VFN0YzQyxnQkFBZ0IsRUFBQTtFQWRsQjtJQWtCTSxXQUFXO0lBQ1gsY0FBYztJQUNkLGNGd0YyQztJRXZGM0MsaUJGd0Y0QztJRXZGNUMsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixtQkFBbUIsRUFBQTs7QUFLekI7OztFQUdFLGVBQWU7RUFDZixxQkFBcUI7RUFDckIsY0ZxRThDO0VFcEU5Qyx5QkZxRTBFLEVBQUE7O0FFbEU1RTtFQUNFLFNBQVM7RUFDVCxtQkFBbUI7RUFDbkIsV0FBVztFQUNYLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixVQUFVLEVBQUEiLCJmaWxlIjoiYm9vdHN0cmFwLWpxdWVyeS11aS1hdXRvY29tcGxldGUuY3NzIn0= */

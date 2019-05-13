@@ -1,0 +1,22 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @enum {string} */
+var ExtensionName = {
+    autoTooltip: 'autoTooltip',
+    cellExternalCopyManager: 'cellExternalCopyManager',
+    checkboxSelector: 'checkboxSelector',
+    columnPicker: 'columnPicker',
+    draggableGrouping: 'draggableGrouping',
+    groupItemMetaProvider: 'groupItemMetaProvider',
+    gridMenu: 'gridMenu',
+    headerButton: 'headerButton',
+    headerMenu: 'headerMenu',
+    noname: 'noname',
+    rowDetailView: 'rowDetailView',
+    rowMoveManager: 'rowMoveManager',
+    rowSelection: 'rowSelection',
+};
+export { ExtensionName };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXh0ZW5zaW9uTmFtZS5lbnVtLmpzIiwic291cmNlUm9vdCI6Im5nOi8vYW5ndWxhci1zbGlja2dyaWQvIiwic291cmNlcyI6WyJhcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9tb2RlbHMvZXh0ZW5zaW9uTmFtZS5lbnVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztJQUVFLGFBQWMsYUFBYTtJQUMzQix5QkFBMEIseUJBQXlCO0lBQ25ELGtCQUFtQixrQkFBa0I7SUFDckMsY0FBZSxjQUFjO0lBQzdCLG1CQUFvQixtQkFBbUI7SUFDdkMsdUJBQXdCLHVCQUF1QjtJQUMvQyxVQUFXLFVBQVU7SUFDckIsY0FBZSxjQUFjO0lBQzdCLFlBQWEsWUFBWTtJQUN6QixRQUFTLFFBQVE7SUFDakIsZUFBZ0IsZUFBZTtJQUMvQixnQkFBaUIsZ0JBQWdCO0lBQ2pDLGNBQWUsY0FBYyIsInNvdXJjZXNDb250ZW50IjpbIi8qKiBMaXN0IG9mIGF2YWlsYWJsZSBTbGlja0dyaWQgRXh0ZW5zaW9ucyAoQ29udHJvbHMgJiBQbHVnaW5zKSAqL1xyXG5leHBvcnQgZW51bSBFeHRlbnNpb25OYW1lIHtcclxuICBhdXRvVG9vbHRpcCA9ICdhdXRvVG9vbHRpcCcsXHJcbiAgY2VsbEV4dGVybmFsQ29weU1hbmFnZXIgPSAnY2VsbEV4dGVybmFsQ29weU1hbmFnZXInLFxyXG4gIGNoZWNrYm94U2VsZWN0b3IgPSAnY2hlY2tib3hTZWxlY3RvcicsXHJcbiAgY29sdW1uUGlja2VyID0gJ2NvbHVtblBpY2tlcicsXHJcbiAgZHJhZ2dhYmxlR3JvdXBpbmcgPSAnZHJhZ2dhYmxlR3JvdXBpbmcnLFxyXG4gIGdyb3VwSXRlbU1ldGFQcm92aWRlciA9ICdncm91cEl0ZW1NZXRhUHJvdmlkZXInLFxyXG4gIGdyaWRNZW51ID0gJ2dyaWRNZW51JyxcclxuICBoZWFkZXJCdXR0b24gPSAnaGVhZGVyQnV0dG9uJyxcclxuICBoZWFkZXJNZW51ID0gJ2hlYWRlck1lbnUnLFxyXG4gIG5vbmFtZSA9ICdub25hbWUnLFxyXG4gIHJvd0RldGFpbFZpZXcgPSAncm93RGV0YWlsVmlldycsXHJcbiAgcm93TW92ZU1hbmFnZXIgPSAncm93TW92ZU1hbmFnZXInLFxyXG4gIHJvd1NlbGVjdGlvbiA9ICdyb3dTZWxlY3Rpb24nLFxyXG59XHJcbiJdfQ==

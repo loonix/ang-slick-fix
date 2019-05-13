@@ -1,0 +1,189 @@
+/* control variables */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.slick-columnpicker {
+  background-color: #f8f8f8;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  padding: 6px;
+  box-shadow: 2px 2px 2px silver;
+  min-width: 150px;
+  cursor: default;
+  position: absolute;
+  z-index: 2000;
+  overflow: auto;
+  resize: both; }
+  .slick-columnpicker > .close {
+    float: right;
+    width: 20px;
+    height: 25px;
+    padding: 2px;
+    background-color: 1px solid #9c9c9c;
+    border: 0px solid #9c9c9c; }
+    .slick-columnpicker > .close > span {
+      opacity: 0.9; }
+  .slick-columnpicker li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: none; }
+    .slick-columnpicker li a {
+      display: block;
+      padding: 4px;
+      font-weight: bold; }
+      .slick-columnpicker li a:hover {
+        background-color: #ffffff; }
+    .slick-columnpicker li label {
+      font-weight: normal; }
+      .slick-columnpicker li label input {
+        margin: 4px; }
+  .slick-columnpicker .title {
+    font-size: 16px;
+    width: 60%;
+    border-bottom: solid 1px #d6d6d6;
+    margin-bottom: 10px; }
+
+.slick-columnpicker-list > hr {
+  margin: 6px 0;
+  border: 0;
+  border-top: 1px solid #d5d5d5; }
+
+.slick-gridmenu {
+  background-color: #fafafa;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  padding: 6px;
+  box-shadow: 2px 2px 2px silver;
+  min-width: 200px;
+  cursor: default;
+  position: absolute;
+  z-index: 2000;
+  overflow: auto;
+  resize: both; }
+  .slick-gridmenu > .close {
+    float: right;
+    opacity: 0.5; }
+  .slick-gridmenu .title {
+    font-size: 16px;
+    width: calc(100% - 30px);
+    border-bottom: solid 1px #d6d6d6;
+    margin-bottom: 5px; }
+  .slick-gridmenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: none; }
+    .slick-gridmenu li a {
+      display: block;
+      padding: 4px;
+      font-weight: bold; }
+      .slick-gridmenu li a:hover {
+        background-color: #ffffff; }
+    .slick-gridmenu li label {
+      font-weight: normal; }
+      .slick-gridmenu li label input {
+        margin: 4px; }
+  .slick-gridmenu input {
+    margin: 4px; }
+
+.slick-gridmenu-button {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  padding: 0 2px;
+  top: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  margin-top: 5px;
+  width: 22px;
+  font-size: 14px; }
+
+.slick-gridmenu-custom {
+  margin-bottom: 10px; }
+
+/* Menu items */
+.slick-gridmenu-item {
+  list-style: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 2px 4px;
+  border: 1px solid transparent;
+  border-radius: 3px; }
+  .slick-gridmenu-item:hover {
+    border-color: silver;
+    background: white; }
+  .slick-gridmenu-item.slick-gridmenu-item-divider {
+    cursor: default;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    height: 1px;
+    margin: 8px 3px;
+    background-color: #e5e5e5; }
+
+.slick-gridmenu-item-divider.slick-gridmenu-item:hover {
+  background-color: #e5e5e5; }
+
+.slick-gridmenu-item-disabled {
+  border-color: transparent !important;
+  background: inherit !important; }
+
+.slick-gridmenu-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.slick-gridmenu-content {
+  display: inline-block;
+  vertical-align: middle; }
+
+.slick-gridmenu-list > hr {
+  margin: 6px 0;
+  border: 0;
+  border-top: 1px solid #dddddd; }
+
+/* Disabled */
+.slick-gridmenu-item-disabled {
+  color: silver; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvc2xpY2stY29udHJvbHMuc2NzcyIsIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvX3ZhcmlhYmxlcy5zY3NzIiwic2xpY2stY29udHJvbHMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHNCQUFBO0FDQUE7Ozs7RUNLRTtBRERDOztrQ0NJK0I7QUREbEMsaUNBQUE7QUFVQSxvRUFBQTtBQU1BLFNBQUE7QUFNQSxTQUFBO0FBV0EsUUFBQTtBQVFBLHlDQUFBO0FBT0EsV0FBQTtBQXlCQSwrQkFBQTtBQUtBLG1IQUFBO0FBbUJBLGlCQUFBO0FBY0EsWUFBQTtBQVlBLDhCQUFBO0FBS0Esa0JBQUE7QUFZQSx3QkFBQTtBQVdBLHNCQUFBO0FBSUEsK0JBQUE7QUFhQSx1QkFBQTtBQWtCQSxzQ0FBQTtBQU9BLFlBQUE7QUFZeUQsNkNBQUE7QUFXekQscUJBQUE7QUFTQSw4QkFBQTtBQTRCQSx1QkFBQTtBQU15RCxZQUFBO0FBQ0EsWUFBQTtBQVF6RCwyQkFBQTtBQThCQSx5QkFBQTtBQTBCQSw0QkFBQTtBQUtBLG9CQUFBO0FBR0EsYUFBQTtBRDVVQTtFQUNFLHlCQ2dJK0M7RUQvSC9DLHlCQ2dJeUQ7RUQvSHpELGtCQ2dJMkM7RUQvSDNDLFlBQVk7RUFHWiw4QkM2SDBEO0VENUgxRCxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2QsY0FBYztFQUNiLFlBQVksRUFBQTtFQWJkO0lBZ0JJLFlBQVk7SUFDWixXQUFXO0lBQ1gsWUFBWTtJQUNaLFlBQVk7SUFDWixtQ0NpSHVEO0lEaEh2RCx5QkNpSHVELEVBQUE7SUR0STNEO01Bd0JNLFlDK0d1QyxFQUFBO0VEdkk3QztJQTZCSSxnQkFBZ0I7SUFDaEIsU0FBUztJQUNULFVBQVU7SUFDVixnQkFBZ0IsRUFBQTtJQWhDcEI7TUFtQ00sY0FBYztNQUNkLFlBQVk7TUFDWixpQkFBaUIsRUFBQTtNQXJDdkI7UUF1Q1EseUJDbUd5QyxFQUFBO0lEMUlqRDtNQTJDTSxtQkM4RjBDLEVBQUE7TUR6SWhEO1FBNkNRLFdDMkZxQyxFQUFBO0VEeEk3QztJQWtESSxlQUFlO0lBQ2YsVUFBVTtJQUNWLGdDQUFnQztJQUNoQyxtQkFBbUIsRUFBQTs7QUFJdkI7RUFDRSxhQUFhO0VBQ2IsU0FBUztFQUNULDZCQUE2QixFQUFBOztBQVEvQjtFQUNFLHlCQ3VGK0M7RUR0Ri9DLHlCQ3VGeUQ7RUR0RnpELGtCQ3VGMkM7RUR0RjNDLFlBQVk7RUFDWiw4QkN5RjBEO0VEeEYxRCxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGtCQUFpQjtFQUNqQixhQUFhO0VBQ2QsY0FBYztFQUNiLFlBQVksRUFBQTtFQVhkO0lBY0ksWUFBWTtJQUNaLFlBQVksRUFBQTtFQWZoQjtJQWtCSSxlQUFlO0lBQ2Ysd0JBQXdCO0lBQ3hCLGdDQUFnQztJQUNoQyxrQkFBa0IsRUFBQTtFQXJCdEI7SUF3QkksZ0JBQWdCO0lBQ2hCLFNBQVM7SUFDVCxVQUFVO0lBQ1YsZ0JBQWdCLEVBQUE7SUEzQnBCO01BNkJNLGNBQWM7TUFDZCxZQUFZO01BQ1osaUJBQWlCLEVBQUE7TUEvQnZCO1FBaUNRLHlCQzREeUMsRUFBQTtJRDdGakQ7TUFxQ00sbUJDdUQwQyxFQUFBO01ENUZoRDtRQXVDUSxXQ29EcUMsRUFBQTtFRDNGN0M7SUE0Q0ksV0FBVyxFQUFBOztBQUlmO0VBQ0Usa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixRQUFRO0VBQ1IsY0FBYztFQUNkLE1BQU07RUFDTiw2QkFBNkI7RUFDN0IsZUFBZTtFQUNmLFNBQVM7RUFDVCxlQUFlO0VBQ2YsV0FBVztFQUNYLGVDb0M0QyxFQUFBOztBRGpDOUM7RUFDRSxtQkFBbUIsRUFBQTs7QUFHckIsZUFBQTtBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLDZCQUE2QjtFQUM3QixrQkFBa0IsRUFBQTtFQU5wQjtJQVFJLG9CQUFvQjtJQUNwQixpQkFBaUIsRUFBQTtFQVRyQjtJQWFJLGVBQWU7SUFDZixZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLFVBQVU7SUFDVixXQzhCeUM7SUQ3QnpDLGVDOEI2QztJRDdCN0MseUJDOEI2QyxFQUFBOztBRDNCakQ7RUFDRSx5QkMwQitDLEVBQUE7O0FEdkJqRDtFQUNFLG9DQUFvQztFQUNwQyw4QkFBOEIsRUFBQTs7QUFHaEM7RUFDRSxxQkFBcUI7RUFDckIsV0FBVztFQUNYLFlBQVk7RUFDWixzQkFBc0I7RUFDdEIsaUJBQWlCO0VBQ2pCLDRCQUE0QjtFQUM1QixrQ0FBa0MsRUFBQTs7QUFHcEM7RUFDRSxxQkFBcUI7RUFDckIsc0JBQXNCLEVBQUE7O0FBRXhCO0VBQ0UsYUFBYTtFQUNiLFNBQVM7RUFDVCw2QkFBNkIsRUFBQTs7QUFHL0IsYUFBQTtBQUNBO0VBQ0UsYUFBYSxFQUFBIiwiZmlsZSI6InNsaWNrLWNvbnRyb2xzLmNzcyJ9 */

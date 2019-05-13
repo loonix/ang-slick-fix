@@ -1,0 +1,1934 @@
+@charset "UTF-8";
+/*
+ * IMPORTANT:
+ * In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+ * No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+ * classes should alter those!
+ */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.slickgrid-container {
+  overflow: hidden;
+  outline: 0;
+  position: relative;
+  box-sizing: content-box; }
+  .slickgrid-container .slick-group-header-columns {
+    position: relative;
+    white-space: nowrap;
+    cursor: default;
+    overflow: hidden; }
+  .slickgrid-container .slick-group-header {
+    width: 100%;
+    overflow: hidden;
+    border-left: 0px; }
+  .slickgrid-container .slick-group-header-column.ui-state-default {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    padding: 4px; }
+  .slickgrid-container .slick-viewport,
+  .slickgrid-container .slick-top-panel-scroller,
+  .slickgrid-container .slick-header,
+  .slickgrid-container .slick-headerrow,
+  .slickgrid-container .slick-footerrow {
+    position: relative;
+    width: 100%;
+    border: 1px solid fade(black, 3%);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    margin: 0;
+    outline: 0; }
+  .slickgrid-container .slick-top-panel-scroller {
+    overflow: hidden; }
+  .slickgrid-container .slick-pane {
+    position: absolute;
+    outline: 0;
+    overflow: hidden;
+    width: 100%; }
+  .slickgrid-container .slick-pane-header {
+    display: block; }
+  .slickgrid-container .slick-viewport {
+    overflow: auto; }
+    .slickgrid-container .slick-viewport ::-webkit-scrollbar {
+      -webkit-appearance: none; }
+    .slickgrid-container .slick-viewport ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      border: 2px solid white;
+      /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, 0.5); }
+  .slickgrid-container .slick-header,
+  .slickgrid-container .slick-headerrow,
+  .slickgrid-container .slick-footerrow {
+    overflow: hidden; }
+  .slickgrid-container .slick-headerrow {
+    border-top-color: transparent;
+    border-top-width: 0; }
+  .slickgrid-container .slick-top-panel,
+  .slickgrid-container .slick-header-columns,
+  .slickgrid-container .slick-headerrow-columns,
+  .slickgrid-container .slick-footerrow-columns {
+    position: relative;
+    white-space: nowrap;
+    cursor: default;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0; }
+  .slickgrid-container .slick-cell,
+  .slickgrid-container .slick-header-column,
+  .slickgrid-container .slick-headerrow-column,
+  .slickgrid-container .slick-footerrow-column {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: 1px solid silver;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-top-width: 0;
+    border-left-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    z-index: 1;
+    white-space: nowrap;
+    cursor: default; }
+    .slickgrid-container .slick-cell.slick-header-is-leaf,
+    .slickgrid-container .slick-header-column.slick-header-is-leaf,
+    .slickgrid-container .slick-headerrow-column.slick-header-is-leaf,
+    .slickgrid-container .slick-footerrow-column.slick-header-is-leaf {
+      border-bottom-color: transparent;
+      border-bottom-width: 0; }
+  .slickgrid-container .slick-header-column.ui-state-default {
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    padding: 4px;
+    border-right: 1px solid fade(black, 3%);
+    border-left: 0px !important;
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+    float: left; }
+  .slickgrid-container .slick-cell {
+    box-sizing: border-box;
+    border-style: solid;
+    padding: 1px 2px 1px 2px; }
+  .slickgrid-container .slick-header-column {
+    padding: 4px 4px 4px 4px; }
+  .slickgrid-container .grid-canvas {
+    position: relative;
+    outline: 0; }
+  .slickgrid-container .slick-row {
+    position: absolute;
+    border: 0;
+    width: 100%; }
+  .slickgrid-container .slick-header-column-sorted {
+    font-style: italic; }
+  .slickgrid-container .slick-sort-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 5px;
+    margin-left: 4px;
+    margin-top: 6px;
+    position: absolute;
+    left: 0; }
+  .slickgrid-container .slick-sort-indicator-desc:before {
+    content: "\f0d7"; }
+  .slickgrid-container .slick-sort-indicator-asc:before {
+    content: "\f0d8"; }
+  .slickgrid-container .slick-header-sortable .slick-column-name {
+    margin-left: 10px; }
+  .slickgrid-container .slick-header.ui-state-default {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .slickgrid-container .slick-column-name {
+    text-overflow: ellipsis; }
+  .slickgrid-container .slick-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    cursor: col-resize;
+    width: 4px;
+    right: 0;
+    top: 0;
+    height: 100%; }
+  .slickgrid-container .slick-resizable-handle-hover {
+    background-color: #ccc; }
+  .slickgrid-container .slick-sortable-placeholder {
+    background: silver; }
+  .slickgrid-container .slick-group-toggle {
+    display: inline-block; }
+  .slickgrid-container .slick-cell.highlighted {
+    background: lightskyblue;
+    background: rgba(0, 0, 255, 0.2);
+    transition: all 0.5s; }
+  .slickgrid-container .slick-cell.flashing {
+    border: 1px solid red !important; }
+  .slickgrid-container .slick-cell.editable {
+    z-index: 11;
+    overflow: visible;
+    background: white;
+    border-color: black;
+    border-style: solid; }
+  .slickgrid-container .slick-cell:focus {
+    outline: none; }
+  .slickgrid-container .slick-reorder-proxy {
+    display: inline-block;
+    background: blue;
+    opacity: 0.15;
+    cursor: move; }
+  .slickgrid-container .slick-reorder-guide {
+    display: inline-block;
+    height: 2px;
+    background: blue;
+    opacity: 0.7; }
+  .slickgrid-container .slick-selection {
+    z-index: 10;
+    position: absolute;
+    border: 2px dashed black; }
+  .slickgrid-container .slick-pane {
+    position: absolute;
+    outline: 0;
+    overflow: hidden;
+    width: 100%; }
+
+.flatpickr-wrapper {
+  z-index: 10000; }
+
+.interact-placeholder {
+  background: red !important;
+  display: inline-block;
+  float: left;
+  -webkit-transform: translate(0px, -100%);
+          transform: translate(0px, -100%); }
+
+.interact-drop-active {
+  box-shadow: inset 0 0 8px rgba(7, 67, 128, 0.5); }
+
+.interact-can-drop {
+  opacity: .9; }
+
+.scrollbar-fix::-webkit-scrollbar {
+  -webkit-appearance: none; }
+
+/* control variables */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.slick-columnpicker {
+  background-color: #f8f8f8;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  padding: 6px;
+  box-shadow: 2px 2px 2px silver;
+  min-width: 150px;
+  cursor: default;
+  position: absolute;
+  z-index: 2000;
+  overflow: auto;
+  resize: both; }
+  .slick-columnpicker > .close {
+    float: right;
+    width: 20px;
+    height: 25px;
+    padding: 2px;
+    background-color: 1px solid #9c9c9c;
+    border: 0px solid #9c9c9c; }
+    .slick-columnpicker > .close > span {
+      opacity: 0.9; }
+  .slick-columnpicker li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: none; }
+    .slick-columnpicker li a {
+      display: block;
+      padding: 4px;
+      font-weight: bold; }
+      .slick-columnpicker li a:hover {
+        background-color: #ffffff; }
+    .slick-columnpicker li label {
+      font-weight: normal; }
+      .slick-columnpicker li label input {
+        margin: 4px; }
+  .slick-columnpicker .title {
+    font-size: 16px;
+    width: 60%;
+    border-bottom: solid 1px #d6d6d6;
+    margin-bottom: 10px; }
+
+.slick-columnpicker-list > hr {
+  margin: 6px 0;
+  border: 0;
+  border-top: 1px solid #d5d5d5; }
+
+.slick-gridmenu {
+  background-color: #fafafa;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  padding: 6px;
+  box-shadow: 2px 2px 2px silver;
+  min-width: 200px;
+  cursor: default;
+  position: absolute;
+  z-index: 2000;
+  overflow: auto;
+  resize: both; }
+  .slick-gridmenu > .close {
+    float: right;
+    opacity: 0.5; }
+  .slick-gridmenu .title {
+    font-size: 16px;
+    width: calc(100% - 30px);
+    border-bottom: solid 1px #d6d6d6;
+    margin-bottom: 5px; }
+  .slick-gridmenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: none; }
+    .slick-gridmenu li a {
+      display: block;
+      padding: 4px;
+      font-weight: bold; }
+      .slick-gridmenu li a:hover {
+        background-color: #ffffff; }
+    .slick-gridmenu li label {
+      font-weight: normal; }
+      .slick-gridmenu li label input {
+        margin: 4px; }
+  .slick-gridmenu input {
+    margin: 4px; }
+
+.slick-gridmenu-button {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  padding: 0 2px;
+  top: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  margin-top: 5px;
+  width: 22px;
+  font-size: 14px; }
+
+.slick-gridmenu-custom {
+  margin-bottom: 10px; }
+
+/* Menu items */
+.slick-gridmenu-item {
+  list-style: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 2px 4px;
+  border: 1px solid transparent;
+  border-radius: 3px; }
+  .slick-gridmenu-item:hover {
+    border-color: silver;
+    background: white; }
+  .slick-gridmenu-item.slick-gridmenu-item-divider {
+    cursor: default;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    height: 1px;
+    margin: 8px 3px;
+    background-color: #e5e5e5; }
+
+.slick-gridmenu-item-divider.slick-gridmenu-item:hover {
+  background-color: #e5e5e5; }
+
+.slick-gridmenu-item-disabled {
+  border-color: transparent !important;
+  background: inherit !important; }
+
+.slick-gridmenu-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.slick-gridmenu-content {
+  display: inline-block;
+  vertical-align: middle; }
+
+.slick-gridmenu-list > hr {
+  margin: 6px 0;
+  border: 0;
+  border-top: 1px solid #dddddd; }
+
+/* Disabled */
+.slick-gridmenu-item-disabled {
+  color: silver; }
+
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.slick-cell.active input.editor-text {
+  border: initial;
+  background: #ffffff;
+  padding-bottom: 0;
+  padding-left: 2px;
+  padding-right: 0;
+  padding-top: 0;
+  margin-left: -2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  margin-top: 2px; }
+
+/* Long Text Editor */
+.slick-large-editor-text {
+  z-index: 10000;
+  position: absolute;
+  background: #ffffff;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 8px; }
+
+.slick-large-editor-text textarea {
+  background: #ffffff;
+  height: 80px;
+  width: 250px;
+  border: 0;
+  outline: 0; }
+
+.slick-large-editor-text .editor-footer {
+  text-align: right; }
+
+.slick-large-editor-text .editor-footer > button {
+  margin-left: 2px; }
+
+/* plugin variables */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.slick-column-name,
+.slick-sort-indicator {
+  /**
+   * This makes all "float:right" elements after it that spill over to the next line
+   * display way below the lower boundary of the column thus hiding them.
+   */
+  float: left;
+  margin-bottom: 100px; }
+
+.slick-header-button {
+  /**
+  * This makes all "float:right" elements after it that spill over to the next line
+  * display way below the lower boundary of the column thus hiding them.
+  */
+  float: right;
+  vertical-align: top;
+  margin: 1px;
+  margin-bottom: 100px;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer; }
+
+.slick-header-button-hidden {
+  width: 0;
+  margin-right: -8px;
+  transition: 0.2s width; }
+
+.slick-header-column:hover > .slick-header-button {
+  width: 15px; }
+
+.slick-header-menubutton {
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+  top: 0;
+  width: 14px; }
+
+.slick-header-menubutton:before {
+  font-family: "FontAwesome";
+  font-size: 14px;
+  content: "\f13a"; }
+
+.slick-header-column:hover .slick-header-menubutton {
+  display: inline-block; }
+
+.slick-header-menu {
+  position: absolute;
+  margin: 0;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #BFBDBD;
+  border-radius: 2px;
+  min-width: 175px;
+  padding: 4px;
+  z-index: 100000;
+  cursor: default;
+  display: inline-block; }
+  .slick-header-menu button {
+    border: 1px solid #BFBDBD;
+    background-color: #ffffff;
+    width: 45px;
+    padding: 4px;
+    margin: 4px 4px 4px 0; }
+  .slick-header-menu .filter {
+    border: 1px solid #BFBDBD;
+    font-size: 8pt;
+    height: 400px;
+    margin-top: 6px;
+    overflow: scroll;
+    padding: 4px;
+    white-space: nowrap;
+    width: 200px; }
+  .slick-header-menu .textfilter > label {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 10px; }
+  .slick-header-menu .textfilter > input[type=text] {
+    width: 70%; }
+
+.slick-header-menuitem {
+  cursor: pointer;
+  border: none;
+  padding: 2px 4px;
+  list-style: none outside none;
+  margin: 0; }
+  .slick-header-menuitem.slick-header-menuitem-divider {
+    cursor: default;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    height: 1px;
+    margin: 8px 3px;
+    background-color: #e5e5e5; }
+
+.slick-header-menuitem-divider.slick-header-menuitem:hover {
+  background-color: #e5e5e5; }
+
+.slick-header-menuicon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 16px;
+  /* Font Awesome sorting icons are not aligned in middle, let's align them ourselves */ }
+  .slick-header-menuicon.fa-sort-asc {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px); }
+  .slick-header-menuicon.fa-sort-desc {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px); }
+
+.slick-header-menucontent {
+  display: inline-block;
+  vertical-align: middle; }
+
+.slick-header-menuitem:hover {
+  border-color: #BFBDBD;
+  background-color: #f3f3f3; }
+
+.slick-header-menuitem-disabled {
+  border-color: transparent !important;
+  background: inherit !important; }
+
+/* Disabled */
+.slick-header-menuitem-disabled {
+  color: silver; }
+
+.slick-cell.cell-reorder:before {
+  font-family: "FontAwesome";
+  font-size: 14px;
+  content: ""; }
+
+.slick-cell.cell-reorder {
+  cursor: move; }
+
+.slick-headerrow-column input[type=checkbox],
+.slick-headerrow-column #filter-checkbox-selectall-container > input[type=checkbox],
+.slick-column-name input[type=checkbox],
+.slick-column-name #filter-checkbox-selectall-container > input[type=checkbox],
+.slick-cell-checkboxsel input[type=checkbox],
+.slick-cell-checkboxsel #filter-checkbox-selectall-container > input[type=checkbox] {
+  display: none;
+  /* to hide the checkbox itself */ }
+
+.slick-headerrow-column input[type=checkbox],
+.slick-headerrow-column #filter-checkbox-selectall-container > input[type=checkbox] + label,
+.slick-column-name input[type=checkbox],
+.slick-column-name #filter-checkbox-selectall-container > input[type=checkbox] + label,
+.slick-cell-checkboxsel input[type=checkbox],
+.slick-cell-checkboxsel #filter-checkbox-selectall-container > input[type=checkbox] + label {
+  margin-left: 4px;
+  margin-top: 3px; }
+
+.slick-headerrow-column input[type=checkbox] + label:before,
+.slick-headerrow-column #filter-checkbox-selectall-container > input[type=checkbox] + label:before,
+.slick-column-name input[type=checkbox] + label:before,
+.slick-column-name #filter-checkbox-selectall-container > input[type=checkbox] + label:before,
+.slick-cell-checkboxsel input[type=checkbox] + label:before,
+.slick-cell-checkboxsel #filter-checkbox-selectall-container > input[type=checkbox] + label:before {
+  cursor: pointer;
+  content: "";
+  color: #31708F;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "FontAwesome";
+  font-size: 13px;
+  opacity: 0.15;
+  /* unchecked icon */ }
+
+.slick-headerrow-column input[type=checkbox] + label:hover:before,
+.slick-headerrow-column #filter-checkbox-selectall-container > input[type=checkbox] + label:hover:before,
+.slick-column-name input[type=checkbox] + label:hover:before,
+.slick-column-name #filter-checkbox-selectall-container > input[type=checkbox] + label:hover:before,
+.slick-cell-checkboxsel input[type=checkbox] + label:hover:before,
+.slick-cell-checkboxsel #filter-checkbox-selectall-container > input[type=checkbox] + label:hover:before {
+  opacity: 0.35; }
+
+.slick-headerrow-column input[type=checkbox]:checked + label:before,
+.slick-headerrow-column #filter-checkbox-selectall-container > input[type=checkbox]:checked + label:before,
+.slick-column-name input[type=checkbox]:checked + label:before,
+.slick-column-name #filter-checkbox-selectall-container > input[type=checkbox]:checked + label:before,
+.slick-cell-checkboxsel input[type=checkbox]:checked + label:before,
+.slick-cell-checkboxsel #filter-checkbox-selectall-container > input[type=checkbox]:checked + label:before {
+  opacity: 1;
+  /* checked icon */ }
+
+.search-filter :focus {
+  outline-color: #73b3e5; }
+
+.ms-choice {
+  border: 1px solid #ccc;
+  background-color: transparent; }
+  .ms-choice span {
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial; }
+
+.ms-filter.search-filter {
+  width: 100% !important; }
+
+.ms-drop {
+  max-width: 250px;
+  border: 1px solid #bbb;
+  z-index: 9999; }
+  .ms-drop input[type="checkbox"],
+  .ms-drop input[type="radio"] {
+    /* make input checkbox invisible but don't hide it since multiple-select uses hide for something else */
+    opacity: 0;
+    width: 0; }
+    .ms-drop input[type="checkbox"] + span:before,
+    .ms-drop input[type="radio"] + span:before {
+      cursor: pointer;
+      color: #31708F;
+      content: "";
+      display: inline-block;
+      font-family: "FontAwesome";
+      font-size: 16px;
+      font-weight: normal;
+      width: 20px;
+      opacity: 0.5; }
+    .ms-drop input[type="checkbox"]:checked + span:before,
+    .ms-drop input[type="radio"]:checked + span:before {
+      content: "";
+      opacity: 1; }
+  .ms-drop input[type="radio"] + span:before {
+    content: ""; }
+  .ms-drop input[type="radio"]:checked + span:before {
+    content: ""; }
+  .ms-drop label {
+    margin-bottom: 5px; }
+    .ms-drop label span {
+      cursor: pointer;
+      margin-left: 4px;
+      position: relative;
+      top: 1px; }
+    .ms-drop label:hover {
+      cursor: pointer;
+      background-color: #eff5fc; }
+  .ms-drop .ms-select-all {
+    border-bottom: 1px solid #ddd; }
+    .ms-drop .ms-select-all label {
+      font-weight: normal;
+      padding: 5px 8px;
+      color: #2a617c; }
+      .ms-drop .ms-select-all label:hover {
+        color: #245269; }
+  .ms-drop .ms-ok-button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 26px;
+    padding: 0;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #31708F;
+    font-weight: 600;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #fff; }
+    .ms-drop .ms-ok-button:hover {
+      background-color: #e2edfa;
+      color: #2a617c; }
+
+.search-filter .operator.input-group-addon {
+  margin: 0;
+  padding: 0;
+  min-width: 25px;
+  border: none; }
+  .search-filter .operator.input-group-addon select.form-control {
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+  .search-filter .operator.input-group-addon select.form-control::-ms-expand {
+    display: none; }
+  .search-filter .operator.input-group-addon select.form-control .empty {
+    color: #c0c0c0; }
+  .search-filter .operator.input-group-addon .form-control {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    padding: 0 0 0 2px !important;
+    font-size: 13px;
+    color: #31708F;
+    font-weight: bold;
+    background-color: #e4eacf; }
+
+.search-filter .operator-char3.input-group-addon {
+  min-width: 30px; }
+
+input.search-filter {
+  font-family: "Segoe UI Symbol"; }
+
+.search-filter input {
+  font-family: "Segoe UI Symbol"; }
+
+.input-group.flatpickr .flatpickr {
+  flex: 1; }
+  .input-group.flatpickr .flatpickr .flatpickr-input.form-control {
+    background-color: #f7f7f7;
+    font-family: "Segoe UI Symbol";
+    font-size: 14px;
+    border-radius: 0 4px 4px 0; }
+
+.slick-preheader-panel .ui-droppable, .slick-preheader-panel .ui-droppable-hover {
+  padding: 5px 10px;
+  height: 35px;
+  border: 1px solid #e0e0e0 !important;
+  width: calc(100% - 25px) !important;
+  border-radius: 4px;
+  background-color: #ffffff; }
+  .slick-preheader-panel .ui-droppable .slick-placeholder, .slick-preheader-panel .ui-droppable-hover .slick-placeholder {
+    font-style: italic;
+    color: #616161; }
+  .slick-preheader-panel .ui-droppable .slick-group-toggle-all, .slick-preheader-panel .ui-droppable-hover .slick-group-toggle-all {
+    position: absolute;
+    cursor: pointer;
+    font-family: "FontAwesome";
+    color: #31708F;
+    display: none !important;
+    top: 7px;
+    right: 40px; }
+    .slick-preheader-panel .ui-droppable .slick-group-toggle-all.expanded:before, .slick-preheader-panel .ui-droppable-hover .slick-group-toggle-all.expanded:before {
+      content: ""; }
+    .slick-preheader-panel .ui-droppable .slick-group-toggle-all.collapsed:before, .slick-preheader-panel .ui-droppable-hover .slick-group-toggle-all.collapsed:before {
+      content: ""; }
+  .slick-preheader-panel .ui-droppable .slick-dropped-grouping, .slick-preheader-panel .ui-droppable-hover .slick-dropped-grouping {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: move; }
+  .slick-preheader-panel .ui-droppable .slick-groupby-remove, .slick-preheader-panel .ui-droppable-hover .slick-groupby-remove {
+    cursor: pointer;
+    display: inline-flex;
+    color: pink;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-size: 16px; }
+    .slick-preheader-panel .ui-droppable .slick-groupby-remove:hover, .slick-preheader-panel .ui-droppable-hover .slick-groupby-remove:hover {
+      color: red; }
+
+.slick-preheader-panel .ui-droppable-active {
+  background-color: #fafafa; }
+
+.slick-preheader-panel .ui-droppable-hover {
+  background-color: #ededed; }
+
+.slick-header .slick-header-columns .slick-column-groupable {
+  display: inline-block;
+  font-weight: normal;
+  color: #707070;
+  width: 9px;
+  height: 9px;
+  margin-left: 4px; }
+
+input.slider-editor-input[type=range],
+input.slider-filter-input[type=range] {
+  /*removes default webkit styles*/
+  -webkit-appearance: none;
+  height: 27px;
+  padding: 0 6px;
+  /* change runnable track color while in focus on all browsers */
+  /* WebKit specific (Opera/Chrome/Safari) */
+  /* Mozilla Firefox specific */
+  /*fix for FF unable to apply focus style bug */
+  border: 1px solid #ccc;
+  /*hide the outline behind the border*/
+  /* Microsoft IE specific */ }
+  input.slider-editor-input[type=range]:focus,
+  input.slider-filter-input[type=range]:focus {
+    outline: none; }
+    input.slider-editor-input[type=range]:focus::-webkit-slider-runnable-track,
+    input.slider-filter-input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #ddd; }
+    input.slider-editor-input[type=range]:focus::-moz-range-track,
+    input.slider-filter-input[type=range]:focus::-moz-range-track {
+      background: #ddd; }
+    input.slider-editor-input[type=range]:focus::-ms-fill-lower,
+    input.slider-filter-input[type=range]:focus::-ms-fill-lower {
+      background: #aaa; }
+    input.slider-editor-input[type=range]:focus::-ms-fill-upper,
+    input.slider-filter-input[type=range]:focus::-ms-fill-upper {
+      background: #ddd; }
+  input.slider-editor-input[type=range]::-webkit-slider-runnable-track,
+  input.slider-filter-input[type=range]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: #eee;
+    border: none;
+    border-radius: 3px; }
+  input.slider-editor-input[type=range]::-webkit-slider-thumb,
+  input.slider-filter-input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 1px solid #9bbc9f;
+    background: #c9dbcb;
+    margin-top: -4px; }
+  input.slider-editor-input[type=range]::-moz-range-track,
+  input.slider-filter-input[type=range]::-moz-range-track {
+    height: 4px;
+    background: #eee;
+    border: none;
+    border-radius: 3px; }
+  input.slider-editor-input[type=range]::-moz-range-thumb,
+  input.slider-filter-input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #9bbc9f;
+    background: #c9dbcb; }
+  input.slider-editor-input[type=range]:-moz-focusring,
+  input.slider-filter-input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px; }
+  input.slider-editor-input[type=range]::-ms-track,
+  input.slider-filter-input[type=range]::-ms-track {
+    height: 4px;
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+    /*remove default tick marks*/
+    color: transparent; }
+  input.slider-editor-input[type=range]::-ms-fill-lower,
+  input.slider-filter-input[type=range]::-ms-fill-lower {
+    background: #ddd;
+    border-radius: 10px; }
+  input.slider-editor-input[type=range]::-ms-fill-upper,
+  input.slider-filter-input[type=range]::-ms-fill-upper {
+    background: #eee;
+    border-radius: 10px; }
+  input.slider-editor-input[type=range]::-ms-thumb,
+  input.slider-filter-input[type=range]::-ms-thumb {
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #9bbc9f;
+    background: #c9dbcb;
+    margin-top: 1px; }
+  input.slider-editor-input[type=range]::-ms-tooltip,
+  input.slider-filter-input[type=range]::-ms-tooltip {
+    display: none; }
+
+.search-filter .slider-value {
+  padding: 0; }
+  .search-filter .slider-value .input-group-text {
+    padding: 4px 8px;
+    font-size: 13px; }
+
+input.slider-filter-input[type=range] {
+  padding: 0 6px;
+  height: 27px; }
+
+/* Slider Editor */
+input.slider-editor-input[type=range] {
+  padding: 0 6px;
+  height: 24px; }
+
+.slider-editor .slider-value {
+  padding: 0; }
+  .slider-editor .slider-value .input-group-text {
+    padding: 4px 6px;
+    font-size: 13px;
+    height: 24px; }
+
+.slick-row .detail-view-toggle {
+  display: inline-block;
+  cursor: pointer; }
+  .slick-row .detail-view-toggle.expand {
+    display: inline-block;
+    color: #71b0ce; }
+    .slick-row .detail-view-toggle.expand:hover {
+      color: #4b9ac1; }
+    .slick-row .detail-view-toggle.expand:before {
+      font-family: "FontAwesome";
+      font-size: 16px;
+      content: ""; }
+  .slick-row .detail-view-toggle.collapse {
+    display: inline-block;
+    color: #31708F; }
+    .slick-row .detail-view-toggle.collapse:hover {
+      color: #245269; }
+    .slick-row .detail-view-toggle.collapse:before {
+      font-family: "FontAwesome";
+      font-size: 16px;
+      content: ""; }
+
+.slick-row .dynamic-cell-detail {
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #c0c0c0;
+  background-color: #f7f7f7;
+  padding: 10px;
+  z-index: 1000; }
+  .slick-row .dynamic-cell-detail :first-child {
+    vertical-align: middle;
+    line-height: 13px; }
+
+/*
+ * IMPORTANT:
+ * In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+ * No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+ * classes should alter those!
+ */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.pointer {
+  cursor: pointer; }
+
+.slickgrid-container .slick-header-columns,
+.slickgrid-container .slick-header-column {
+  background: rgba(255, 255, 255, 0.6); }
+
+.slickgrid-container .slick-header-columns {
+  /*border-bottom: 1px solid $grid-border-color;*/
+  background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1)); }
+
+.slickgrid-container .slick-header-column {
+  border-right: 1px solid fade(black, 3%);
+  border-bottom: 1px solid fade(black, 3%); }
+
+.slickgrid-container .slick-header-column:hover {
+  background: rgba(250, 250, 250, 0.6); }
+
+.slickgrid-container .slick-header-column-active {
+  background: rgba(242, 242, 242, 0.6) !important; }
+
+.slickgrid-container .slick-headerrow {
+  background: rgba(255, 255, 255, 0.6); }
+
+.slickgrid-container .slick-headerrow-column {
+  background: #fafafa;
+  border-bottom: 0; }
+
+.slickgrid-container .grid-canvas {
+  background: white; }
+
+.slickgrid-container .slick-row {
+  background: inherit;
+  border: 0;
+  line-height: 20px; }
+  .slickgrid-container .slick-row .slick-cell {
+    background: inherit;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box; }
+    .slickgrid-container .slick-row .slick-cell.invalid {
+      border-color: red;
+      -moz-animation-duration: 0.2s;
+      -webkit-animation-duration: 0.2s;
+      -moz-animation-name: slickgrid-invalid-hilite;
+      -webkit-animation-name: slickgrid-invalid-hilite;
+      animation-duration: 0.2s;
+      animation-name: slickgrid-invalid-hilite; }
+    .slickgrid-container .slick-row .slick-cell.selected {
+      background-color: #e7e7c3; }
+    .slickgrid-container .slick-row .slick-cell.active {
+      border: 1px solid #aaaaaa;
+      padding-top: 5px;
+      padding-left: 7px; }
+      .slickgrid-container .slick-row .slick-cell.active input.editor-text {
+        width: 100%;
+        height: 100%;
+        outline: 0;
+        -webkit-transform: translate(0, -2px);
+                transform: translate(0, -2px); }
+  .slickgrid-container .slick-row.odd .slick-cell {
+    background: #f7f7f7; }
+    .slickgrid-container .slick-row.odd .slick-cell.selected {
+      background-color: #d6d6b2; }
+  .slickgrid-container .slick-row.active-row .slick-cell {
+    background-color: #e2fffd; }
+    .slickgrid-container .slick-row.active-row .slick-cell.selected {
+      background-color: red; }
+  .slickgrid-container .slick-row.active-row.odd .slick-cell {
+    background-color: #f2f2f2; }
+    .slickgrid-container .slick-row.active-row.odd .slick-cell.selected {
+      background-color: green; }
+  .slickgrid-container .slick-row.loading {
+    opacity: 0.5; }
+
+.slickgrid-container .slick-group {
+  border-bottom: 2px solid silver; }
+
+.slickgrid-container .slick-group-toggle {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px; }
+
+.slickgrid-container .slick-group-toggle.expanded {
+  background: none; }
+
+.slickgrid-container .slick-group-toggle.collapsed {
+  background: none; }
+
+.slickgrid-container .slick-group-totals {
+  color: gray;
+  background: white; }
+
+.slickgrid-container .slick-sortable-placeholder {
+  background: silver !important; }
+
+@-webkit-keyframes slickgrid-invalid-hilite {
+  from {
+    box-shadow: 0 0 6px red; }
+  to {
+    box-shadow: none; } }
+
+@keyframes slickgrid-invalid-hilite {
+  from {
+    box-shadow: 0 0 6px red; }
+  to {
+    box-shadow: none; } }
+
+.slickgrid-container .header-overlay,
+.slickgrid-container .cell-overlay,
+.slickgrid-container .selection-cell-overlay {
+  display: block;
+  position: absolute;
+  z-index: 999; }
+
+.slickgrid-container .slick-cell > .editor-select {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0; }
+
+.slickgrid-container .slick-range-decorator {
+  z-index: 100;
+  pointer-events: none;
+  background: transparent;
+  border: none;
+  outline: black; }
+
+/* pagination/pagination variables */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+/* Pagination styling */
+.slick-pagination {
+  border-top: 0 none;
+  border-right: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  width: 100%;
+  height: 34px;
+  padding-top: 4px;
+  vertical-align: middle;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #808080; }
+  .slick-pagination .slick-pagination-status {
+    display: inline-block;
+    padding: 6px; }
+  .slick-pagination .ui-icon-container {
+    display: inline-block;
+    border-color: #ddd; }
+  .slick-pagination .slick-pagination-nav {
+    display: inline-block;
+    padding: 2px;
+    height: 34px; }
+    .slick-pagination .slick-pagination-nav nav {
+      display: inline-block; }
+    .slick-pagination .slick-pagination-nav .slick-page-number {
+      vertical-align: top;
+      margin-top: 6px;
+      display: inline-block;
+      padding: 0 5px; }
+      .slick-pagination .slick-pagination-nav .slick-page-number input {
+        background-color: #fafbed;
+        height: 26px;
+        width: 44px;
+        padding: 2px;
+        display: inline-block; }
+    .slick-pagination .slick-pagination-nav .pagination {
+      margin: 0; }
+      .slick-pagination .slick-pagination-nav .pagination .page-link {
+        font-size: 13px;
+        border: 1px solid #acacac;
+        height: 32px; }
+      .slick-pagination .slick-pagination-nav .pagination .page-item {
+        cursor: pointer; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item a[class*="icon-seek-"] {
+          border-color: 1px solid #acacac;
+          color: #31708F;
+          text-decoration: none;
+          font-family: "FontAwesome";
+          -webkit-text-stroke: 0.4px; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item a[class*="icon-seek-"]:hover {
+          background-color: #E6E6E6; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item .icon-seek-first:before {
+          content: ""; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item .icon-seek-prev:before {
+          content: ""; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item .icon-seek-next:before {
+          content: ""; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item .icon-seek-end:before {
+          content: ""; }
+      .slick-pagination .slick-pagination-nav .pagination .page-item.disabled {
+        cursor: not-allowed;
+        font-weight: normal; }
+        .slick-pagination .slick-pagination-nav .pagination .page-item.disabled a[class*="icon-seek-"] {
+          color: #b8b8b8;
+          background-color: #f9f9f9;
+          border-color: #dedede; }
+  .slick-pagination .slick-pagination-settings {
+    display: block;
+    float: right;
+    padding: 2px; }
+    .slick-pagination .slick-pagination-settings select {
+      font-size: 12px;
+      line-height: 1.5;
+      height: 32px;
+      width: 54px;
+      padding: 0 0 2px 2px;
+      border: 1px solid #acacac;
+      border-radius: 3px; }
+    .slick-pagination .slick-pagination-settings .slick-pagination-count {
+      margin-left: 2px; }
+
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.full-height {
+  height: 100%; }
+
+.gridPane {
+  width: 100%; }
+
+.grid-header {
+  border: 1px solid gray;
+  border-bottom: 0;
+  border-top: 0;
+  /*background: url('../images/header-bg.gif') repeat-x center top;*/
+  color: black;
+  height: 24px;
+  line-height: 24px; }
+
+.grid-header label {
+  display: inline-block;
+  font-weight: bold;
+  margin: auto auto auto 6px; }
+
+.grid-header .ui-icon {
+  margin: 4px 4px auto 6px;
+  background-color: transparent;
+  border-color: transparent; }
+
+.grid-header .ui-icon.ui-state-hover {
+  background-color: white; }
+
+.grid-header #txtSearch {
+  margin: 0 4px 0 4px;
+  padding: 2px 2px;
+  border-radius: 2px;
+  border: 1px solid silver; }
+
+.options-panel {
+  border-radius: 6px;
+  border: 1px solid silver;
+  background: #f0f0f0;
+  padding: 4px;
+  margin-bottom: 20px;
+  width: 320px;
+  position: absolute;
+  top: 0px;
+  left: 650px; }
+
+/* Individual cell styles */
+.slick-cell.task-name {
+  font-weight: bold;
+  text-align: right; }
+
+.slick-cell.task-percent {
+  text-align: right; }
+
+.slick-cell.cell-move-handle {
+  font-weight: bold;
+  text-align: right;
+  border-right: solid gray;
+  background: #efefef;
+  cursor: move; }
+
+.cell-move-handle:hover {
+  background: #b6b9bd; }
+
+.slick-row.selected .cell-move-handle {
+  background: #D5DC8D; }
+
+.slick-row .cell-actions {
+  text-align: left; }
+
+.slick-row.complete {
+  background-color: #DFD;
+  color: #555; }
+
+.percent-complete-bar {
+  display: inline-block;
+  height: 6px;
+  border-radius: 3px;
+  background-color: transparent; }
+
+/* Slick.Editors.Text, Slick.Editors.Date */
+.ui-datepicker-trigger {
+  margin-top: 2px;
+  padding: 0;
+  vertical-align: top; }
+
+/* Slick.Editors.PercentComplete */
+input.editor-percentcomplete {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  outline: 0;
+  padding: 0;
+  float: left; }
+
+.editor-percentcomplete-picker {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 100%;
+  /*background: url("../images/pencil.gif") no-repeat center center;*/
+  overflow: visible;
+  z-index: 1000;
+  float: right; }
+
+.editor-percentcomplete-helper {
+  border: 0 solid gray;
+  position: absolute;
+  top: -2px;
+  left: -9px;
+  /*background: url("../images/editor-helper-bg.gif") no-repeat top left;*/
+  padding-left: 9px;
+  width: 120px;
+  height: 140px;
+  display: none;
+  overflow: visible; }
+
+.editor-percentcomplete-wrapper {
+  background: beige;
+  padding: 20px 8px;
+  width: 100%;
+  height: 98px;
+  border: 1px solid gray;
+  border-left: 0; }
+
+.editor-percentcomplete-buttons {
+  float: right; }
+
+.editor-percentcomplete-buttons button {
+  width: 80px; }
+
+.editor-percentcomplete-slider {
+  float: left; }
+
+.editor-percentcomplete-picker:hover .editor-percentcomplete-helper {
+  display: block; }
+
+.editor-percentcomplete-helper:hover {
+  display: block; }
+
+/* Slick.Editors.YesNoSelect */
+select.editor-yesno {
+  width: 100%;
+  margin: 0;
+  vertical-align: middle; }
+
+/* Slick.Editors.Checkbox */
+input.editor-checkbox {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  border: 0; }
+
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* Mixins for SlickGrid */
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+@-webkit-keyframes highlight-fade {
+  to {
+    background: #c8ddea; }
+  from {
+    background: none; } }
+
+@keyframes highlight-fade {
+  to {
+    background: #c8ddea; }
+  from {
+    background: none; } }
+
+.slickgrid-container {
+  border-top: 0 none;
+  border-bottom: 1px solid #dddddd;
+  border-left: 0 none;
+  border-right: 0 none;
+  position: relative;
+  /** Frozen/Pinned styling */ }
+  .slickgrid-container input[type="checkbox"] {
+    vertical-align: baseline;
+    margin: 0; }
+  .slickgrid-container .slick-viewport {
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-right: 0 none; }
+  .slickgrid-container .ui-state-default {
+    border: 0; }
+  .slickgrid-container .grid-canvas .slick-row {
+    position: absolute;
+    width: 100%; }
+    .slickgrid-container .grid-canvas .slick-row:hover {
+      background-color: #eff5fc; }
+    .slickgrid-container .grid-canvas .slick-row.active {
+      padding: 5px 7.5834px; }
+    .slickgrid-container .grid-canvas .slick-row.highlight {
+      background-color: #c8ddea;
+      -webkit-animation: highlight-fade 1.5s ease 1;
+              animation: highlight-fade 1.5s ease 1; }
+      .slickgrid-container .grid-canvas .slick-row.highlight .slick-cell.copied {
+        background: rgba(0, 0, 255, 0.2);
+        transition: 0.5s background; }
+      .slickgrid-container .grid-canvas .slick-row.highlight.odd {
+        background-color: #c8ddea;
+        -webkit-animation: highlight-fade 1.5s ease 1;
+                animation: highlight-fade 1.5s ease 1; }
+      .slickgrid-container .grid-canvas .slick-row.highlight.odd .slick-cell.copied {
+        background: rgba(0, 0, 255, 0.2);
+        transition: 0.5s background; }
+    .slickgrid-container .grid-canvas .slick-row.highlighter {
+      background: orange !important;
+      transition-property: background;
+      transition-duration: 3s;
+      transition-timing-function: ease-in; }
+    .slickgrid-container .grid-canvas .slick-row.copied {
+      background: rgba(0, 0, 255, 0.2);
+      transition: 0.5s background; }
+    .slickgrid-container .grid-canvas .slick-row.odd {
+      background: #f7f7f7; }
+      .slickgrid-container .grid-canvas .slick-row.odd:hover {
+        background-color: #eff5fc; }
+    .slickgrid-container .grid-canvas .slick-row.odd .slick-cell {
+      background: inherit; }
+      .slickgrid-container .grid-canvas .slick-row.odd .slick-cell.selected {
+        background-color: #dae8f1; }
+      .slickgrid-container .grid-canvas .slick-row.odd .slick-cell.copied {
+        background: rgba(0, 0, 255, 0.2);
+        transition: 0.5s background; }
+    .slickgrid-container .grid-canvas .slick-row.odd .slick-cell {
+      background: inherit; }
+      .slickgrid-container .grid-canvas .slick-row.odd .slick-cell.selected {
+        background-color: #dae8f1; }
+      .slickgrid-container .grid-canvas .slick-row.odd .slick-cell.copied {
+        background: rgba(0, 0, 255, 0.2);
+        transition: 0.5s background; }
+    .slickgrid-container .grid-canvas .slick-row.slick-group-totals {
+      color: gray;
+      background: #fff; }
+      .slickgrid-container .grid-canvas .slick-row.slick-group-totals .slick-cell {
+        font-size: 14px; }
+  .slickgrid-container .grid-canvas .slick-cell, .slickgrid-container .grid-canvas .slick-headerrow-column {
+    border-top: 1px solid #dddddd;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-right: 0 none; }
+  .slickgrid-container .grid-canvas .even {
+    background: #ffffff; }
+  .slickgrid-container .grid-canvas .slick-cell {
+    padding: 5px 7.5834px;
+    font-size: 14px; }
+    .slickgrid-container .grid-canvas .slick-cell td {
+      font-size: 14px; }
+    body .slickgrid-container .grid-canvas .slick-cell {
+      line-height: 20px; }
+    .slickgrid-container .grid-canvas .slick-cell a, .slickgrid-container .grid-canvas .slick-cell a:visited, .slickgrid-container .grid-canvas .slick-cell .ui-widget-content a, .slickgrid-container .grid-canvas .slick-cell .ui-widget-content a:visited {
+      color: #08c; }
+    .slickgrid-container .grid-canvas .slick-cell a:hover, .slickgrid-container .grid-canvas .slick-cell .ui-widget-content a:hover {
+      color: darker(#08c, 15%);
+      border-bottom: none; }
+    .slickgrid-container .grid-canvas .slick-cell table {
+      height: 100%;
+      border: 0 none;
+      padding: 0;
+      background: none; }
+    .slickgrid-container .grid-canvas .slick-cell td {
+      border: 0 none;
+      padding: 0;
+      vertical-align: middle;
+      text-align: left; }
+    .slickgrid-container .grid-canvas .slick-cell.selected {
+      background-color: #dae8f1; }
+    .slickgrid-container .grid-canvas .slick-cell.copied {
+      background: rgba(0, 0, 255, 0.2);
+      transition: 0.5s background; }
+    .slickgrid-container .grid-canvas .slick-cell select:not([multiple]).form-control {
+      height: 100%;
+      padding: 0; }
+    .slickgrid-container .grid-canvas .slick-cell .slick-group-toggle {
+      color: #31708F;
+      font-weight: bold;
+      width: 14px;
+      height: 20px;
+      margin-right: 2px;
+      cursor: pointer; }
+      .slickgrid-container .grid-canvas .slick-cell .slick-group-toggle.expanded:before {
+        content: "";
+        font-family: "FontAwesome";
+        font-size: 18px; }
+      .slickgrid-container .grid-canvas .slick-cell .slick-group-toggle.collapsed:before {
+        content: "";
+        font-family: "FontAwesome";
+        font-size: 18px; }
+  .slickgrid-container .slick-header {
+    border-top: 0 none;
+    border-right: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    width: 100%;
+    box-shadow: none !important; }
+  .slickgrid-container .slick-headerrow {
+    border-bottom: 0 none;
+    border-top: 0 none;
+    border-left: 0 none;
+    border-right: 0 none; }
+    .slickgrid-container .slick-headerrow .slick-headerrow-columns .slick-headerrow-column {
+      border: none;
+      padding: 4px;
+      background: #ffffff; }
+    .slickgrid-container .slick-headerrow .slick-headerrow-columns .slick-headerrow-column input,
+    .slickgrid-container .slick-headerrow .slick-headerrow-columns .slick-headerrow-column select,
+    .slickgrid-container .slick-headerrow .slick-headerrow-columns .slick-headerrow-column textarea {
+      margin-right: 0;
+      padding: 0 6px;
+      width: none;
+      height: 27px;
+      box-sizing: border-box; }
+  .slickgrid-container .slick-preheader-panel.ui-state-default .slick-header-column {
+    border-left: none !important;
+    font-size: 16px !important; }
+  .slickgrid-container .slick-header-columns {
+    background: transparent;
+    width: calc(100% - 16px); }
+    .slickgrid-container .slick-header-columns .slick-header-sortable .slick-column-name {
+      margin-left: 0; }
+    .slickgrid-container .slick-header-columns .slick-header-column {
+      height: 34px;
+      line-height: 14px;
+      margin: 0;
+      border-top: 0 none;
+      border-right: 0 none;
+      border-bottom: 0 none;
+      border-left: 0 none;
+      white-space: normal;
+      /* like TH  */
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #000000;
+      font-weight: bold; }
+      .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default {
+        padding: 5px 7.5834px;
+        font-size: 14px; }
+        .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default td {
+          font-size: 14px; }
+        body .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default {
+          line-height: 20px; }
+      .slickgrid-container .slick-header-columns .slick-header-column a, .slickgrid-container .slick-header-columns .slick-header-column a:visited {
+        color: #333; }
+      .slickgrid-container .slick-header-columns .slick-header-column a:hover {
+        color: #333; }
+      .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default {
+        /* like TH  */
+        background: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #000000;
+        font-weight: bold; }
+        .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default a, .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default a:visited {
+          color: #333; }
+        .slickgrid-container .slick-header-columns .slick-header-column.ui-state-default a:hover {
+          color: #333; }
+      .slickgrid-container .slick-header-columns .slick-header-column.slick-header-column-sorted {
+        font-style: normal;
+        color: #333; }
+      .slickgrid-container .slick-header-columns .slick-header-column:hover {
+        color: #333; }
+      .slickgrid-container .slick-header-columns .slick-header-column .slick-sort-indicator {
+        background: none;
+        font-family: "FontAwesome";
+        font-size: 14px;
+        position: absolute;
+        display: inline-block;
+        color: #4c80be;
+        width: 8px;
+        height: 5px;
+        left: auto;
+        right: 10px;
+        top: 15px; }
+      .slickgrid-container .slick-header-columns .slick-header-column .slick-sort-indicator-numbered {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 10px;
+        position: absolute;
+        display: inline-block;
+        color: #4c80be;
+        width: 8px;
+        left: auto;
+        right: 0px;
+        top: 26px; }
+      .slickgrid-container .slick-header-columns .slick-header-column .slick-sort-indicator-asc:before {
+        content: ""; }
+      .slickgrid-container .slick-header-columns .slick-header-column .slick-sort-indicator-desc:before {
+        content: ""; }
+      .slickgrid-container .slick-header-columns .slick-header-column .slick-resizable-handle {
+        width: 7px;
+        right: 0px;
+        z-index: 1; }
+      .slickgrid-container .slick-header-columns .slick-header-column .slick-resizable-handle:hover {
+        border-right: 1px solid #d0d0d0;
+        right: 0; }
+  .slickgrid-container .slick-row .slick-cell.frozen:last-child,
+  .slickgrid-container .slick-headerrow-column.frozen:last-child,
+  .slickgrid-container .slick-footerrow-column.frozen:last-child {
+    border-right: 1px solid #a5a5a5; }
+  .slickgrid-container .slick-pane-bottom {
+    border-top: 1px solid #a5a5a5; }
+  .slickgrid-container .slick-viewport-bottom.slick-viewport-right {
+    overflow-y: scroll !important; }
+
+/*!
+ * SlickGrid custom styling for Bootstrap (https://github.com/ghiscoding/angular-slickgrid)
+ * Licensed under MIT (https://github.com/ghiscoding/angular-slickgrid/blob/master/LICENSE)
+ * @author: Ghislain B. (ghiscoding)
+ */
+/*!
+
+/* SlickGrid Bootstrap variables */
+/* Used by slick-bootstrap.scss */
+/* Slickgrid container, including headers but excluding pagination */
+/* grid */
+/* cell */
+/* row */
+/* Pre-Header - Header Grouping colspan */
+/* header */
+/* Frozen pinned rows/columns */
+/* icon font is using Font-Awesome by default but could be changed to any other icon package like Glyphicons, ... */
+/* AutoComplete */
+/* Sorting */
+/* Grouping Totals Formatter */
+/* Column picker */
+/** Detail View Plugin */
+/* Excel copy plugin */
+/* Grid Menu - hamburger menu */
+/* Header Menu Plugin */
+/* Checkbox Selector / Row Selection */
+/* Editors */
+/* negative number to cancel inside padding */
+/* Compound Filters */
+/* Draggable Grouping Plugin */
+/* Input Range Filter */
+/* ms only */
+/* ms only */
+/* Multiple-Select Filter */
+/* pagination variables */
+/* Row Move Manager Plugin */
+/* selector plugin */
+/* Viewport */
+.ui-autocomplete {
+  position: absolute;
+  z-index: 1000;
+  padding: 0;
+  margin-top: 2px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  max-height: 25vh;
+  min-height: 75px;
+  min-width: 50px;
+  overflow-y: auto; }
+  .ui-autocomplete li div {
+    clear: both;
+    display: block;
+    color: #333333;
+    padding: 3px 15px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    white-space: nowrap; }
+
+.ui-state-hover,
+.ui-state-active,
+.ui-state-focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #262626;
+  background-color: #e2edfa; }
+
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  width: 1px; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNsaWNrZ3JpZC10aGVtZS1ib290c3RyYXAuY3NzIiwiLi4vLi4vLi4vc3JjL2FwcC9tb2R1bGVzL2FuZ3VsYXItc2xpY2tncmlkL3N0eWxlcy9zbGljay1ncmlkLnNjc3MiLCIuLi8uLi8uLi9zcmMvYXBwL21vZHVsZXMvYW5ndWxhci1zbGlja2dyaWQvc3R5bGVzL192YXJpYWJsZXMuc2NzcyIsIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvc2xpY2stY29udHJvbHMuc2NzcyIsIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvc2xpY2stZWRpdG9ycy5zY3NzIiwiLi4vLi4vLi4vc3JjL2FwcC9tb2R1bGVzL2FuZ3VsYXItc2xpY2tncmlkL3N0eWxlcy9zbGljay1wbHVnaW5zLnNjc3MiLCIuLi8uLi8uLi9zcmMvYXBwL21vZHVsZXMvYW5ndWxhci1zbGlja2dyaWQvc3R5bGVzL3NsaWNrLWRlZmF1bHQtdGhlbWUuc2NzcyIsIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvc2xpY2stcGFnaW5hdGlvbi5zY3NzIiwiLi4vLi4vLi4vc3JjL2FwcC9tb2R1bGVzL2FuZ3VsYXItc2xpY2tncmlkL3N0eWxlcy9zbGlja2dyaWQtZXhhbXBsZXMuc2NzcyIsIi4uLy4uLy4uL3NyYy9hcHAvbW9kdWxlcy9hbmd1bGFyLXNsaWNrZ3JpZC9zdHlsZXMvc2xpY2stYm9vdHN0cmFwLnNjc3MiLCIuLi8uLi8uLi9zcmMvYXBwL21vZHVsZXMvYW5ndWxhci1zbGlja2dyaWQvc3R5bGVzL2Jvb3RzdHJhcC1qcXVlcnktdWktYXV0b2NvbXBsZXRlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCOzs7OztFRE1FO0FFTkY7Ozs7RUZXRTtBRVBDOztrQ0ZVK0I7QUVQbEMsaUNBQUE7QUFVQSxvRUFBQTtBQU1B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c0doQywwQlAxRzZDO1FPMkc3QyxlUHRHdUQsRUFBQTtFT3hFakU7SUFxTEksa0JQbkk0QztJT29JNUMsb0JQbkk0QztJT29JNUMscUJQbkk0QztJT29JNUMsbUJQbkk0QztJT29JNUMsV0FBVztJQUNYLDJCQUEyQixFQUFBO0VBMUwvQjtJQThMSSxxQlB0STRDO0lPdUk1QyxrQlB6STRDO0lPMEk1QyxtQlB2STRDO0lPd0k1QyxvQlAxSTRDLEVBQUE7SU92RGhEO01BcU1RLFlBQVk7TUFDWixZUHRKcUM7TU91SnJDLG1CUHpKeUMsRUFBQTtJTzlDakQ7OztNQTRNUSxlQUFlO01BQ2YsY1BoS3VDO01PaUt2QyxXUGxLc0M7TU9tS3RDLFlQcEtzQztNT3VLdEMsc0JBQXNCLEVBQUE7RUFsTjlCO0lBeU5NLDRCQUE4QztJQUM5QywwQkFBMEMsRUFBQTtFQTFOaEQ7SUErTkksdUJQbEppRDtJT21KakQsd0JBQXFELEVBQUE7SUFoT3pEO01Bb09RLGNBQWMsRUFBQTtJQXBPdEI7TUF3T00sWVB2TDhEO01Pd0w5RCxpQlBsUDREO01PbVA1RCxTQUFTO01BQ1Qsa0JQekwwQztNTzBMMUMsb0JQekwwQztNTzBMMUMscUJQekwwQztNTzBMMUMsbUJQekwwQztNTzBMMUMsbUJBQW1CO01BU2pCLGFBQUE7TUFDQSx1QlA1SzZDO01PNks3Qyx1R1BsUTRIO01PbVE1SCxjUHJOeUM7TU9zTnpDLGlCUHZOc0MsRUFBQTtNT3JDOUM7UUFRSSxxQlBXa0Q7UU9WbEQsZVBsQjhELEVBQUE7UU9TbEU7VUFXTSxlUHBCNEQsRUFBQTtRT3NCOUQ7VUFDRSxpQkFBaUIsRUFBQTtNQWR2QjtRQThQVSxXUDdLa0MsRUFBQTtNT2pGNUM7UUFpUVUsV1BoTGtDLEVBQUE7TU9qRjVDO1FBd1BRLGFBQUE7UUFDQSx1QlA1SzZDO1FPNks3Qyx1R1BsUTRIO1FPbVE1SCxjUHJOeUM7UU9zTnpDLGlCUHZOc0MsRUFBQTtRT3JDOUM7VUE4UFUsV1A3S2tDLEVBQUE7UU9qRjVDO1VBaVFVLFdQaExrQyxFQUFBO01PakY1QztRQTJRUSxrQkFBa0I7UUFDbEIsV1AzTG9DLEVBQUE7TU9qRjVDO1FBK1FRLFdQOUxvQyxFQUFBO01PakY1QztRQW1SUSxnQkFBZ0I7UUFDaEIsMEJQak4rQztRT2tOL0MsZVBqTnNDO1FPa050QyxrQkFBa0I7UUFDbEIscUJBQXFCO1FBQ3JCLGNQbExtRDtRT21MbkQsVUFBVTtRQUNWLFdBQVc7UUFDWCxVQUFVO1FBQ1YsV1ByTHNDO1FPc0x0QyxTUHJMcUUsRUFBQTtNT3hHN0U7UUFnU1EsdUdQeFM0SDtRT3lTNUgsZVB4THNDO1FPeUx0QyxrQkFBa0I7UUFDbEIscUJBQXFCO1FBQ3JCLGNQOUxtRDtRTytMbkQsVVAzTHFDO1FPNExyQyxVUDNMc0M7UU80THRDLFVQM0xxQztRTzRMckMsU1AzTDRELEVBQUE7TU83R3BFO1FBNFNVLFlQeE1nQyxFQUFPO01PcEdqRDtRQWlUVSxZUDVNZ0MsRUFBTztNT3JHakQ7UUFxVFEsVUFBVTtRQUNWLFVBQVU7UUFDVixVQUFVLEVBQUE7TUF2VGxCO1FBMFRRLCtCUGhRbUQ7UU9pUW5ELFFBQVEsRUFBQTtFQTNUaEI7OztJQXNVSSwrQlB2UXVELEVBQUE7RU8vRDNEO0lBMFVJLDZCUDVRdUQsRUFBQTtFTzlEM0Q7SUE2VUksNkJBQTZDLEVBQUE7O0FQaFdqRDs7OztFRm8wREU7QUVoMERDOztrQ0ZtMEQrQjtBRWgwRGxDLGlDQUFBO0FBVUEsb0VBQUE7QUFNQSxTQUFBO0FBTUEsU0FBQTtBQVdBLFFBQUE7QUFRQSx5Q0FBQTtBQU9BLFdBQUE7QUF5QkEsK0JBQUE7QUFLQSxtSEFBQTtBQW1CQSxpQkFBQTtBQWNBLFlBQUE7QUFZQSw4QkFBQTtBQUtBLGtCQUFBO0FBWUEsd0JBQUE7QUFXQSxzQkFBQTtBQUlBLCtCQUFBO0FBYUEsdUJBQUE7QUFrQkEsc0NBQUE7QUFPQSxZQUFBO0FBWXlELDZDQUFBO0FBV3pELHFCQUFBO0FBU0EsOEJBQUE7QUE0QkEsdUJBQUE7QUFNeUQsWUFBQTtBQUNBLFlBQUE7QUFRekQsMkJBQUE7QUE4QkEseUJBQUE7QUEwQkEsNEJBQUE7QUFLQSxvQkFBQTtBQUdBLGFBQUE7QVE3VUE7RUFDRSxrQkFBa0I7RUFDbEIsYVI0RzJDO0VRM0czQyxVQUFVO0VBQ1YsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQix5QlI2RitDO0VRNUYvQyxxQ1I2RnFFO0VRNUZyRSxrQlI2RjBDO0VRNUYxQywyQ1I2RnVFO0VRNUZ2RSw0QkFBNEI7RUFDNUIsZ0JSOEY0QztFUTdGNUMsZ0JSOEY0QztFUTdGNUMsZVI4RjJDO0VRN0YzQyxnQkFBZ0IsRUFBQTtFQWRsQjtJQWtCTSxXQUFXO0lBQ1gsY0FBYztJQUNkLGNSd0YyQztJUXZGM0MsaUJSd0Y0QztJUXZGNUMsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixtQkFBbUIsRUFBQTs7QUFLekI7OztFQUdFLGVBQWU7RUFDZixxQkFBcUI7RUFDckIsY1JxRThDO0VRcEU5Qyx5QlJxRTBFLEVBQUE7O0FRbEU1RTtFQUNFLFNBQVM7RUFDVCxtQkFBbUI7RUFDbkIsV0FBVztFQUNYLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixVQUFVLEVBQUEiLCJmaWxlIjoic2xpY2tncmlkLXRoZW1lLWJvb3RzdHJhcC5jc3MifQ== */
