@@ -12508,8 +12508,9 @@ class AutoCompleteEditor {
      */
     serializeValue() {
         // if user provided a custom structure, we will serialize the value returned from the object with custom structure
+        const minLength = this.editorOptions.minLength || this.editorOptions.minLength === 0 ? this.editorOptions.minLength : 3;
         if (this.editorOptions.forceUserInput) {
-            this._currentValue = this.$input.val().length > 3 ? this.$input.val() : this._currentValue;
+          this._currentValue = this.$input.val().length >= minLength ? this.$input.val() : this._currentValue;
         }
         if (this.customStructure && this._currentValue.hasOwnProperty(this.labelName)) {
             return this._currentValue[this.labelName];
