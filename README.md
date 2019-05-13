@@ -1,3 +1,8 @@
+# How to use this?
+If you have conflicts with froala and slickgrid use this as your angular slickgrid package:
+    `"angular-slickgrid": "git+https://github.com/loonix/ang-slick-fix.git",`
+
+
 # Angular-Slickgrid
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
